@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.haiterog.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <ListView fx:id="cmdMessage" prefHeight="200.0" prefWidth="200.0" />
+    <ListView fx:id="lstMessage" prefHeight="200.0" prefWidth="200.0" />
+    <HBox prefHeight="100.0" prefWidth="200.0" >
+        <Button fx:id="afiseazaTorturi" text="afiseaza torturi" onAction="#getAllTorturi"/>
+        <Button fx:id="afiseazaComenzi" text="afiseaza comenzi" onAction="#getAllComenzi"/>
+        <Button fx:id="genereazaTorturi" text="genereaza 100 de torturi" onAction="#gen100T"/>
+        <Button fx:id="genereazaComenzi" text="genereaza 100 de comenzi" onAction="#gen100C"/>
+
+    </HBox>
+    <HBox spacing="10.0">
+        <Label text="id tort"/>
+        <TextField fx:id="id_tort" prefWidth="100"/>
+        <Label text="tip tort"/>
+        <TextField fx:id="tip_tort" prefWidth="100"/>
+        <Label text="id tort de modificat"/>
+        <TextField fx:id="id_tort_mod" prefWidth="100"/>
+    </HBox>
+    <HBox spacing="10.0">
+        <Label text="id comanda"/>
+        <TextField fx:id="id_comanda" prefWidth="100"/>
+        <Label text="lista torturi"/>
+        <TextField fx:id="lista_torturi" prefWidth="100"/>
+        <Label text="id comanda de modificat"/>
+        <TextField fx:id="id_comanda_mod" prefWidth="100"/>
+        <Label text="data"/>
+        <TextField fx:id="data_comanda" prefWidth="100"/>
+    </HBox>
+    <HBox spacing="10.0">
+        <Button fx:id="addTort" text="adauga tort" onAction="#addTort"/>
+        <Button fx:id="removeTort" text="sterge un tort" onAction="#removeTort"/>
+        <Button fx:id="updateTort" text="modifica un tort" onAction="#updateTort"/>
+    </HBox>
+    <HBox spacing="10.0">
+        <Button fx:id="addComanda" text="adauga comanda" onAction="#addComanda"/>
+        <Button fx:id="removeComanda" text="sterge comanda" onAction="#removeComanda"/>
+        <Button fx:id="updateComanda" text="modifica comanda" onAction="#updateComanda"/>
+    </HBox>
+</VBox>
